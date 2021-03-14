@@ -6,11 +6,19 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
 
+function regIn(){
+		window.location.replace("cadastro.php");
+	}
+</script>
 </head>
 
 
 <body id ='login-body'>
+
+
+	  
 
 	<?php include "header.php"?>
 
@@ -25,9 +33,9 @@
                     
                     <input type="password" id="password" class="form-input" name="login" placeholder="Senha">
                     
-					<input type="button" class="button-login" value="Entrar" onclick="logIn()">
+					<input type="button" class="button-login" value="Entrar"  onclick="logIn()">
 					<br>
-					<input type="button" class="button-register" value="Registrar" onclick="logIn()">
+					<input type="button" class="button-register" value="Registrar" id='registrar' onclick="regIn()">
                 </form>
                 
 			</div><!--// fechamento postagem -->
@@ -38,6 +46,8 @@
 
 
 	</div>
+	
+
 	<?php include "footer.php"?>
 
 </body>

@@ -14,7 +14,8 @@
 <body>
 
 	<?php include "header.php"?>
-
+<div id='area-principal'>
+	<?php include "aside.php"?>
 	<div id="principal"> 
 
 		<div id ='conteudo'>
@@ -23,6 +24,7 @@
 				pelo evento anual da Pizza na cidade. Contamos com ingredientes frescos e preparados na hora para você ter a melhor expêriencia possível.
 				Seja nosso cliente e ganhe um cartão fidelidade, venha conferir!
 			</p>
+			<br><br>
 			<h3> Missão </h3>
 			<ul>
 				<li>
@@ -40,7 +42,7 @@
 		
 			</ul>
 		
-				
+			<br><br>
 			<h3> Valores </h3>
 			<ul>
 		
@@ -59,6 +61,7 @@
 		</div>
 
 	</div>
+</div>
 	<?php include "footer.php"?>
 
 </body>

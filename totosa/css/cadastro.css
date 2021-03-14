@@ -4,8 +4,10 @@
 	padding: 0;
 }
 
-
-body#login-body {
+#checkboxes{
+	align-items: flex-start;
+}
+body#cadastro-body {
 	font-size: 1em;
 	width: 100%;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -17,20 +19,7 @@ body#login-body {
 	background-blend-mode: multiply;
 }
 
-.button-login {
-	font-family: "Roboto", sans-serif;
-	text-transform: uppercase;
-	outline: 0;
-	background:#f7b600;
-	width: 50%;
-	border: 0;
-	padding: 15px;
-	color: #FFFFFF;
-	font-size: 14px;
-	-webkit-transition: all 0.3 ease;
-	transition: all 0.3 ease;
-	cursor: pointer;
-  }
+
   .button-register {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -47,14 +36,14 @@ body#login-body {
 	cursor: pointer;
   }
 
-#login-div{
+#cadastro-div{
 	padding-left: 90px ;
 	padding-right: 90px;
 	padding-bottom: 20px;
 	padding-top: 50px;
 }
 
-.login-form{
+.cadastro-form{
 	position: relative;
 	z-index: 1;
 	background: #FFFFFF;
@@ -67,7 +56,7 @@ body#login-body {
 }
 .form-input {
 	outline: 0;
-	background: #ffffff;
+	background: #e5e2e2;
 	border-bottom: 20px solid rgb(231, 210, 15);
 	width: 100%;
 	border: 0;

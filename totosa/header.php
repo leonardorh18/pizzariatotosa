@@ -3,7 +3,12 @@
 
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
 <header id="cabecalho">
-    <div id="logo">
+<div id="logo">
+<!--<img class="center" src="imagens/logo.png" alt="Pizza" width="20" height="100"> !-->
+
+</div>
+
+    <div id="logo-text">
         <h1>Pizzaria <span >ToToSa</span></h1>
     </div>
     <nav id="menu">

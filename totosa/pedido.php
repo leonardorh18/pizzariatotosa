@@ -14,14 +14,18 @@
 <body>
 
 	<?php include "header.php"?>
+	<div id='area-principal'>
 
+	<?php include "aside.php"?>
 	<div id="principal"> 
 
 
-	<?php include "footer.php"?>
+	
 
 
 	</div>
+	</div>
+	<?php include "footer.php"?>
 
 </body>
 </html>

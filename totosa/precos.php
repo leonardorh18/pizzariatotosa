@@ -14,140 +14,119 @@
 <body>
 
 	<?php include "header.php"?>
-
+<div id='area-principal'>
+	<?php include "aside.php"?>
 	<div id="principal"> 
+		
 		<h1 class='sabores-titulo'>Sabores da casa</h1>
-		<table style="width:70%" class='center'>
-		<tr>
-			<th>Sabores</th>
-			<th>P</th>
-			<th>M</th>
-			<th>G</th>
-			<th>GG</th>
-		</tr>
-		<tr>
-			<td>Calabresa</td>
-			<td>R$ 25,00</td>
-			<td>R$ 30,00</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>		
-		</tr>
-		<tr>
-			<td>Frango com Catupiry</td>
-			<td>R$ 25,00</td>
-			<td>R$ 30,00</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>	
-		</tr>
-		<tr>
-			<td>Portuguesa</td>
-			<td>R$ 25,00</td>
-			<td>R$ 30,00</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>	
-		</tr>
-		<tr>
-			<td>Chocolate preto com morango</td>
-			<td>R$ 22,00</td>
-			<td>R$ 27,00</td>
-			<td>R$ 32,00</td>
-			<td>R$ 36,00</td>		
-		</tr>
-		<tr>
-			<td>Camarão</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>
-			<td>R$ 45,00</td>
-			<td>R$ 50,00</td>	
-		</tr>
-		<tr>
-			<td>Camarão ao molho madeira</td>
-			<td>R$ 40,00</td>
-			<td>R$ 45,00</td>
-			<td>R$ 50,00</td>
-			<td>R$ 55,00</td>	
-		</tr>
-		<tr>
-			<td>Strogonoff de frango ou gado</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>
-			<td>R$ 45,00</td>
-			<td>R$ 50,00</td>	
-		</tr>
-		<tr>
-			<td>Picanha ao molho barbecue</td>
-			<td>R$ 30,00</td>
-			<td>R$ 35,00</td>
-			<td>R$ 40,00</td>
-			<td>R$ 45,00</td>	
-		</tr>
-		<tr>
-			<td>Vegana</td>
-			<td>R$ 20,00</td>
-			<td>R$ 25,00</td>
-			<td>R$ 30,00</td>
-			<td>R$ 35,00</td>	
-		</tr>
-		</table>
-
-		<table  style="width:50%" class='center'>
+		<div class ='table-content'>
+			<table  class='centerTable'>
 			<tr>
-				<th>Bebida</th>
-				<th>1L</th>
-				<th>2L</th>
-				<th>2.5L</th>
+				<th> Tamanhos </th>
+				<th> Sabores </th>
+				<th> Fatias </th>
+				<th> Medida </th>
+				<th> Preço </th>
 			</tr>
 			<tr>
-				<td>Coca-Cola</td>
-				<td>R$ 7,00</td>
-				<td>R$ 10,00</td>
-				<td>R$ 12,00</td>
-			</tr>
-			<tr>
-				<td>Guaraná</td>
-				<td>R$ 7,00</td>
-				<td>R$ 10,00</td>
-				<td>R$ 12,00</td>
-			</tr>
-			<tr>
-				<td>Sprite</td>
-				<td>R$ 7,00</td>
-				<td>R$ 10,00</td>
-				<td>R$ 12,00</td>
-			</tr>
-			<tr>
-				<td>Fanta Laranja</td>
-				<td>R$ 7,00</td>
-				<td>R$ 10,00</td>
-				<td>R$ 12,00</td>
-			</tr>
-		</table>
-
-		<table class = 'center'  style="width:30%">
+				<td>Broto</td>
+				<td>1</td>
+				<td>6</td>
+				<td>20cm</td>
+				<td>R$ 25,00</td>
 			
-			<tr>
-				<th>Borda</th>
-				<th>Valor</th>
 			</tr>
 			<tr>
-				<td>Chocolate</td>
-				<td>+ R$ 8,00</td>
+				<td>Pequena</td>
+				<td>2</td>
+				<td>8</td>
+				<td>25cm</td>
+				<td>R$ 30,00</td>
 			</tr>
 			<tr>
-				<td>Catupiry</td>
-				<td>+ R$ 7,00</td>
+				<td>Media</td>
+				<td>3</td>
+				<td>12</td>
+				<td>30cm</td>
+				<td>R$ 40,00</td>	
 			</tr>
 			<tr>
-				<td>Doce de Leite</td>
-				<td>+ R$ 10,00</td>
+				<td>Grande</td>
+				<td>4</td>
+				<td>16</td>
+				<td>35cm</td>
+				<td>R$ 50,00</td>	
 			</tr>
 			<tr>
-				<td>Cheddar Americano</td>
-				<td>+ R$ 10,00</td>
+				<td>Familia</td>
+				<td>4</td>
+				<td>22</td>
+				<td>50cm</td>
+				<td>R$ 60,00</td>
 			</tr>
-		</table>
+
+			</table>
+
+			<table   class='centerTable'>
+				<tr>
+					<th>Bebida</th>
+					<th>1L</th>
+					<th>2L</th>
+					<th>2.5L</th>
+				</tr>
+				<tr>
+					<td>Coca-Cola</td>
+					<td>R$ 7,00</td>
+					<td>R$ 10,00</td>
+					<td>R$ 12,00</td>
+				</tr>
+				<tr>
+					<td>Guaraná</td>
+					<td>R$ 7,00</td>
+					<td>R$ 10,00</td>
+					<td>R$ 12,00</td>
+				</tr>
+				<tr>
+					<td>Sprite</td>
+					<td>R$ 7,00</td>
+					<td>R$ 10,00</td>
+					<td>R$ 12,00</td>
+				</tr>
+				<tr>
+					<td>Fanta Laranja</td>
+					<td>R$ 7,00</td>
+					<td>R$ 10,00</td>
+					<td>R$ 12,00</td>
+				</tr>
+			</table>
+
+			<table  class='centerTable' >
+				
+				<tr>
+					<th>Borda</th>
+					<th>Valor</th>
+				</tr>
+				<tr>
+					<td>Chocolate</td>
+					<td>+ R$ 8,00</td>
+				</tr>
+				<tr>
+					<td>Catupiry</td>
+					<td>+ R$ 7,00</td>
+				</tr>
+				<tr>
+					<td>Doce de Leite</td>
+					<td>+ R$ 10,00</td>
+				</tr>
+				<tr>
+					<td>Cheddar Americano</td>
+					<td>+ R$ 10,00</td>
+				</tr>
+			</table>
+		</div>
 
 	</div>
+</div>
 	<?php include "footer.php"?>
 
 </body>
