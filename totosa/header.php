@@ -5,7 +5,6 @@
 <header id="cabecalho">
 <div id="logo">
 <!--<img class="center" src="imagens/logo.png" alt="Pizza" width="20" height="100"> !-->
-
 </div>
 
     <div id="logo-text">

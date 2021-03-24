@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Pizzaria Totosa">
 	<meta name="keywords" content="Pizza, totosa, Pizzaria">
 	<meta name="author" content="Leonardo H. Rocha">
