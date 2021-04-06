@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-	
-<head>
-	<title>Preços</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Pizzaria Totosa">
-	<meta name="keywords" content="Pizza, totosa, Pizzaria">
-	<meta name="author" content="Leonardo H. Rocha">
 
-</head>
-<body>
-
-	<?php include "header.php"?>
 <div id='area-principal'>
-	<?php include "aside.php"?>
+
 	<div id="principal"> 
 		
 		<h1 class='sabores-titulo'>Sabores da casa</h1>
@@ -59,7 +43,7 @@
 				<td>R$ 50,00</td>	
 			</tr>
 			<tr>
-				<td>Familia</td>
+				<td>Gigante</td>
 				<td>4</td>
 				<td>22</td>
 				<td>50cm</td>
@@ -128,7 +112,3 @@
 
 	</div>
 </div>
-	<?php include "footer.php"?>
-
-</body>
-</html>

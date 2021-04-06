@@ -84,6 +84,9 @@ body {
 	overflow: hidden;
   }
 
+.bar:hover{
+	cursor: pointer;
+}
 .bar .txt {
     display: flex;
     background-color: #da8a12;
@@ -120,7 +123,7 @@ body {
 
 #area-principal {
 
-position: relative;
+
 margin-bottom: 10px;
 min-height: 80vh;
 
@@ -136,16 +139,7 @@ min-height: 80vh;
 	opacity: 100%;
 	
 }
-#principal-pedido {
-	width: 50%;
-	margin: 0 auto;
-	padding: 25px;
-	margin-top: 10px;
-	align-items: center;
-	background-color: #ccc;
-	opacity: 100%;
-	
-}
+
 #promo-close{
 	color: red;
 	float: right;
@@ -158,8 +152,10 @@ min-height: 80vh;
  #area-lateral {
 	position: relative;
 	width: 20%;
+	margin-top: 15px;;
 	margin-right: 30px;
 	float:right;
+	display: block;
 	clear: both;
  
 }
@@ -405,7 +401,32 @@ a:hover {
   }
 
   /* ---------------------- PEDIDOS -------------*/
-
+  #principal-pedido {
+	width: 50%;
+	margin: 0 auto;
+	padding: 25px;
+	margin-top: 10px;
+	
+	align-items: flex-start;
+	background-color: #ccc;
+	opacity: 100%;
+	
+}
+  .button-pedido {
+	align-content: center;
+	font-family: "Roboto", sans-serif;
+	margin-top: 10px;
+	background:#078307;
+	width: 25%;
+	border: 2;
+	border-color: #ffffff;
+	padding: 15px;
+	color: #000000;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+  }
   .sabor{
 	width: 400px;
 	min-height: 100px;
@@ -438,7 +459,7 @@ a:hover {
 }
 
 .selecionado{
-	background-color: #aad3c6;
+	background-color: #f0c435;
 	transition: 1s;
 } 
 
@@ -459,6 +480,21 @@ a:hover {
 }
 
 @media only screen and (max-width: 700px){
+	.button-pedido {
+		align-self: center;
+		font-family: "Roboto", sans-serif;
+		margin-top: 10px;
+		background:#078307;
+		width: 80%;
+		border: 2;
+		border-color: #ffffff;
+		padding: 15px;
+		color: #000000;
+		font-size: 14px;
+		-webkit-transition: all 0.3 ease;
+		transition: all 0.3 ease;
+		cursor: pointer;
+	  }
 
 	#menu{
 		display: none;
@@ -484,7 +520,7 @@ a:hover {
 
 
 	#area-lateral {
-
+		margin-top: 15px;
 		position: relative;
 		width: 90%;
 		margin-top: 10px;
