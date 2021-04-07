@@ -27,7 +27,13 @@
 
 
 		</div>
+	<script>
+	function regIn(){
 
+		window.location = 'index.php?view=cadastro'; 
+
+	}
+	 </script>
 
 	</div>
 	
