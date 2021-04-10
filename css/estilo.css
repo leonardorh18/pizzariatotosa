@@ -5,6 +5,17 @@
 	
 }
 
+.images {
+
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
 
 
 table th {
@@ -75,36 +86,40 @@ body {
 	
 	
 }
-.bar {
+
+.chat {
 	position: fixed;
 	bottom: 5px;
-	right: 60px;
+	right: 20px;
 	z-index: 120;
 	border-radius: 15px 15px 10px 10px;
-	overflow: hidden;
+	overflow-y: hidden;
   }
 
-.bar:hover{
-	cursor: pointer;
-}
-.bar .txt {
-    display: flex;
-    background-color: #da8a12;
-    color: #ffffff;
-    padding: 10px 5px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    padding-right: 11px;
-    padding-left: 45px;
-    margin-left: -35px;
+.chat .txt {
+	display: flex;
+	background-color: #19da12;
+	color: #ffffff;
+	padding: 10px 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	
+	font-weight: bold;
+	padding-right: 11px;
+	padding-left: 45px;
+	margin-left: -35px;
 
+}
+
+
+.chat:hover{
+	cursor: pointer;
 }
 
 
 #cabecalho {
 	background-color: #f74e00;
-	padding: 10px;
+	
   	width: 100%;
 	text-align: center;
 }
@@ -186,14 +201,16 @@ h2#slogan{
   
 }
 
+
 #rodape {
+	
 	overflow-x: hidden;
+	padding-top: 15px;
 	width: 100%;
-	max-height: fit-content;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	text-align: center;
-	padding: 15px;
 	background-color:#f74e00;
-	color: rgb(26, 25, 25);
+	color: rgb(255, 255, 255);
 	
 }
 
@@ -413,7 +430,6 @@ a:hover {
 	padding: 25px;
 	margin-top: 10px;
 	
-	align-items: flex-start;
 	background-color: #ccc;
 	opacity: 100%;
 	
@@ -486,6 +502,12 @@ a:hover {
 }
 
 @media only screen and (max-width: 700px){
+	.como-conheceu{
+		padding: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		
+	}
 	.button-pedido {
 		align-self: center;
 		font-family: "Roboto", sans-serif;
@@ -524,7 +546,10 @@ a:hover {
 	}
 
 
+	#rodape, ul {
 
+		padding-bottom: 18px;
+	}
 	#area-lateral {
 		margin-top: 15px;
 		position: relative;
@@ -663,7 +688,7 @@ a:hover {
 			overflow-x: hidden;
 			
 		}
-		.bar {
+		.chat {
 			position: fixed;
 			bottom: 5px;
 			right: 20px;
@@ -672,9 +697,9 @@ a:hover {
 			overflow-y: hidden;
 		  }
 		
-		.bar .txt {
+		.chat .txt {
 			display: flex;
-			background-color: #da8a12;
+			background-color: #19da12;
 			color: #ffffff;
 			padding: 10px 5px;
 			font-family: Verdana, Geneva, sans-serif;
@@ -683,6 +708,7 @@ a:hover {
 			padding-right: 11px;
 			padding-left: 45px;
 			margin-left: -35px;
+			
 		
 		}
 		
