@@ -1,12 +1,23 @@
+
+function chamaWpp(){
+
+	window.location.replace("https://api.whatsapp.com/send?phone=49998040163&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pizzaria%20Totosa!");
+
+}
+
+
+
 document.body.onresize = function(){
     largura = window.innerWidth;
     menu = document.getElementById("menu");
     if(largura >=700){
+        console.log("Asdasd")
         menu.style.display = 'block';
     }
     else{
         menu.style.display = 'none';
     }
+
 };
 
 function showMenu(){

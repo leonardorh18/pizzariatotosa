@@ -3,6 +3,7 @@
 
 window.onload = function(){
     document.getElementById('promo-close').onclick = function(){
+		console.log("Fechnadoooooooo");
         this.parentNode.parentNode.parentNode
         .removeChild(this.parentNode.parentNode);
         return false;

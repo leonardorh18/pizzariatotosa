@@ -26,17 +26,15 @@ table th {
 }
 table th td {
 
-	padding: 20px;
+	padding: 10px;
 	text-align: left;
 	
 }
 
 table{
-
 	border-collapse: separate;
 	border-spacing: 10px 0;
   
-
 }
 .centerTable {
   margin-left: auto;
@@ -133,6 +131,7 @@ body {
 }
 
 #logo-text, #menu {
+
 	padding: 10px;
 }
 
@@ -497,6 +496,7 @@ a:hover {
 }
 
 #menu ul li{
+	
 	display: inline; /* transforma elementos de bloco em inline */
 	margin: 0 20px 0 0;
 }
@@ -525,6 +525,7 @@ a:hover {
 	  }
 
 	#menu{
+		
 		display: none;
 	
 	}
@@ -534,6 +535,9 @@ a:hover {
 	}
 
 	#showMenu{
+		margin-left: 15px;
+		margin-bottom: 15px;
+
 		width: 10vh;
 		display: block;
 
@@ -710,6 +714,33 @@ a:hover {
 			margin-left: -35px;
 			
 		
+		}
+
+		table th {
+			background-color: #065f0a;
+			padding: 2px;
+			text-align: center;
+			color:  white; 
+		}
+		
+		table th td {
+		
+			padding: 10px;
+			text-align: left;
+			
+		}
+		
+		table{
+			border-collapse: separate;
+			border-color: #000000;
+			border-spacing: 10px 0;
+			
+		  
+		}
+		.centerTable {
+		  margin-left: auto;
+		  margin-right: auto;
+		  margin-bottom: 35px;
 		}
 		
 }
