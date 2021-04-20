@@ -15,9 +15,9 @@ else {
             $titulo = "Cadastro de Sabor";
             // logica para cadastro
             if(!isset($_POST['cadastrar'])){ // dados ainda nao submetidos
-                include "views/layout/topo.php";
+                include "views/layout/header.php";
                 include "views/cadastraSabor.php";
-                include "views/layout/rodape.php";                
+                include "views/layout/footer.php";                
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Sabor();
@@ -26,9 +26,9 @@ else {
                 $novo->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "views/layout/topo.php";
+                    include "views/layout/header.php";
                     include "views/cadastraSabor.php";
-                    include "views/layout/rodape.php";                       
+                    include "views/layout/footer.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload
@@ -42,9 +42,9 @@ else {
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "views/layout/topo.php";
+                        include "views/layout/header.php";
                         include "views/cadastraSabor.php";
-                        include "views/layout/rodape.php";                         
+                        include "views/layout/footer.php";                         
                     }
                 }
             }
