@@ -34,7 +34,7 @@
             <li><a href="index.php?view=precos">Preços</a> </li>
             <li><a href="index.php?view=contato">Contato</a> </li>
             <li><a href="index.php?view=quemsomos">Quem somos</a> </li>
-            <li><a href="index.php?view=admController">Adm</a> </li>
+            <li><a href="index.php?view=adm">Adm</a> </li>
             
 
         </ul>
