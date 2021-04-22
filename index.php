@@ -8,7 +8,7 @@
 		if ($_GET['view'] == 'admController'){
 
 
-			include_once("adm/{$_GET['view']}.php");
+			header('Location: adm/admController.php');
 
 
 

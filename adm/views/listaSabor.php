@@ -1,5 +1,5 @@
 <main>
-    <h2><?=$titulo ?></h2>
+    <h2></h2>
     <hr>
     <br><br>
     <p>| <a href="saborController.php?acao=cadastra">inserir novo</a> |</p>
