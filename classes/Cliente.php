@@ -42,6 +42,26 @@
                     $erros[] = "complete tudo";   
                 return $erros;                                 
             }
+
+            public function validateUp(){
+                $erros = array();
+                if(empty($this->getNome()))
+                    $erros[] = "É necessário informar um nome";
+                if(empty($this->getEmail()))
+                    $erros[] = "complete tudo";  
+                if(empty($this->getTelefone()))
+                    $erros[] = "complete tudo";   
+                if(empty($this->getDataNascimento()))
+                    $erros[] = "complete tudo";   
+                if(empty($this->getSenha()))
+                    $erros[] = "complete tudo";   
+                if(empty($this->getEndereco()))
+                    $erros[] = "complete tudo";   
+                if(empty($this->getBairro()))
+                    $erros[] = "complete tudo";   
+
+                return $erros;                                 
+            }
         /**
          * Get the value of codigo
          */ 

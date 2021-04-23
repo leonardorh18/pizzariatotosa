@@ -1,6 +1,6 @@
 <?php
     require_once "Conexao.php";
-    require_once "cliente.php";
+    require_once "Cliente.php";
 
     class ClienteDAO{
         
@@ -27,7 +27,7 @@
                 $query = $this->conexao->prepare("select * from cliente where codigo=:cod");
                 $query->bindParam(":cod", $cod);
                 $query->execute();
-                $registro = $query->fetch(PDO::FETCH_CLASS, "Cliente");
+                $registro = $query->fetchAll(PDO::FETCH_CLASS, "Cliente");
                 return $registro;
             }
             catch(PDOException $e){
@@ -60,10 +60,15 @@
         public function alterar(cliente $cliente){
             try{
                 $query = $this->conexao->prepare("update cliente set nome = :n, 
-                ingredientes = :i, nomeImagem = :f 
-                 where codigo = :cod");
+                    email = :e, telefone = :t, dataNascimento = :dt, senha = :s, endereco = :end, bairro = :b, observacoes = :obs where codigo = :cod");
                 $query->bindValue(":n", $cliente->getNome());
-
+                $query->bindValue(":e", $cliente->getEmail());
+                $query->bindValue(":t", $cliente->getTelefone());
+                $query->bindValue(":dt", $cliente->getDataNascimento());
+                $query->bindValue(":s", $cliente->getSenha());
+                $query->bindValue(":end", $cliente->getEndereco());
+                $query->bindValue(":b", $cliente->getBairro());
+                $query->bindValue(":obs", $cliente->getObservacoes());
 
                 $query->bindValue(":cod", $cliente->getCodigo());
                 return $query->execute();

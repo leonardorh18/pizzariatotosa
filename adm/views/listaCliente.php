@@ -16,6 +16,7 @@
         <th>Email</th>
         <th>Telefone</th>
         <th>Endereco</th>
+        <th>Nascimento</th>
     </tr>
 
     <?php
@@ -31,6 +32,7 @@
                 <td><?=$cliente->getEmail() ?></td>
                 <td><?=$cliente->getTelefone() ?></td>
                 <td><?=$cliente->getEndereco() ?></td>
+                <td><?=$cliente->getDataNascimento() ?></td>
                 <td>
                 <a href="clienteController.php?acao=altera&cod=<?=$cliente->getCodigo() ?>">alterar</a> 
                 | 

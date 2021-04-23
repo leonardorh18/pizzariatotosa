@@ -3,6 +3,8 @@
 <html>
 	
 <head>
+
+
 	<title>ToToSa - A pizzaria mais gostosa da cidade</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +13,8 @@
 	<meta name="description" content="Pizzaria Totosa">
 	<meta name="keywords" content="Pizza, totosa, Pizzaria">
 	<meta name="author" content="Leonardo H. Rocha">
+
+
 
 </head> 
 
@@ -31,7 +35,7 @@
 
             <li><a href="admController.php?view=addcliente">Add Cliente</a> </li>
 
-            <li><a href="admController.php?view=inicio">Adm</a> </li>
+            <li><a href="admController.php">Adm</a> </li>
             
 
         </ul>

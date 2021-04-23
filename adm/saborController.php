@@ -52,11 +52,47 @@ else {
             break;
 
         
-        case 'altera':
-            echo $titulo = "Alteração de Sabor";
-            // logica para alteracao
-            break;
-
+            case 'altera':
+                $titulo = "Alteração de Sabor";
+                if(!isset($_POST['alterar'])){ // dados ainda nao submetidos; carrega os dados atuais
+                    $obj = new ClienteDAO();
+                    $sabor = $obj->buscar($_GET['cod']);
+                    include "views/layout/topo.php";
+                    include "views/alteraSabor.php";
+                    include "views/layout/rodape.php"; 
+                }
+                else{ // dados submetidos; efetua a alteração
+                    $obj = new Sabor();
+                    $obj->setNome($_POST['field_nome']);
+                    $obj->setIngredientes($_POST['field_ingredientes']);
+                    $obj->setNomeImagem($_FILES['field_imagem']['name']);
+                    $obj->setCodigo($_POST['field_codigo']);
+                    $erros = $obj->validate();
+                    if(count($erros) != 0){ 
+                        echo 'EROOOOOOOOOOOOOOO';// algum campo em branco
+                        include "views/layout/topo.php";
+                        include "views/alteraSabor.php";
+                        include "views/layout/rodape.php";                       
+                    }
+                    else{ // campos todos preenchidos
+                        //upload
+                        $destino = "../assets/images/".$_FILES['field_imagem']['name']; 
+                        if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
+                            //inserção
+                            $bd = new SaborDAO();
+                            if($bd->alterar($obj))
+                                header("Location: saborController.php"); // redireciona
+                        }
+                        else{
+                            // erro no upload
+                            $erros[] = "Erro no upload";
+                            include "views/layout/topo.php";
+                            include "views/cadastraSabor.php";
+                            include "views/layout/rodape.php";                         
+                        }
+                    }
+                }
+                break;
         
         case 'exclui':
             $bd = new SaborDAO();
