@@ -18,24 +18,29 @@
 
 
 
-table th {
-	background-color: #065f0a;
-	padding: 2px;
-	text-align: center;
-	color:  white; 
-}
-table th td {
 
-	padding: 10px;
-	text-align: left;
-	
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+    padding: 10px; 
+}
+table a{
+
+	color: black;
+}
+th{
+	background-color: #AC653B;
+	color: white;
 }
 
-table{
-	border-collapse: separate;
-	border-spacing: 10px 0;
-  
+tr:nth-child(even){
+	background-color: #ec939f;
 }
+
+tr:nth-child(odd){
+	background-color: #CCC;
+}
+
 .centerTable {
   margin-left: auto;
   margin-right: auto;
@@ -144,7 +149,7 @@ min-height: 80vh;
 }
 
 #principal {
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
 	padding: 25px;
 	margin-top: 10px;

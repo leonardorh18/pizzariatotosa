@@ -65,7 +65,7 @@ else {
                 $bd = new ClienteDAO;
                 echo $_GET['cod'];
                 $cliente = $bd->buscar($_GET['cod']);
-                //print_r($cliente);
+                
                 include "views/alteraCliente.php";
                 include "views/layout/footer.php";
 

@@ -1,4 +1,6 @@
-<main>
+<main id = 'principal'>
+
+<div id = 'area-principal'>
     <h2></h2>
     <hr>
     <br><br>
@@ -33,6 +35,7 @@
     }
     ?>
     </table>
+    </div>
 </main>
 
 

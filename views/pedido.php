@@ -20,123 +20,38 @@
         <div id="opcoes_pedido">
             <p>Você selecionou <strong id="numSabores">0</strong> de <strong id="limiteSabores">0</strong> sabores</p>
             <div id="lista_sabores">
-                <!-- container -->
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/calabresa.jpg" alt="calabresa">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Calabresa</strong>
-                            Molho, calabresa e mussarela
-                        </div>
-                    </label>
-                </div>
+            <?php
+            // $conexao = mysqli_connect("localhost", "admpizza", "12345", "pizza");
+            // $sql = "select * from sabor";
+            // $resultado = mysqli_query($conexao, $sql);
+            // mysqli_close($conexao);            
+            // while($array = mysqli_fetch_assoc($resultado)){ // para cada sabor
 
+            require_once "classes/SaborDAO.php";
+            $obj = new SaborDAO();
+            $lista = $obj->listar(); 
+            if(count($lista) == 0){
+                echo "Nenhum sabor encontrado.";
+            }
+            else{
+                foreach ($lista as $sabor){
+                ?>            
                 <div class="sabor">
                     <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
+                        <input type="checkbox" name="sabores[]" value="<?=$sabor->getCodigo()?>" onchange="updateCount()">
                         <div class="sabor_img">
-                            <img src="imagens/alho.jpg" alt="alho e óleo">
+                            <img src="imagens/<?=$sabor->getNomeImagem()?>" alt="<?=$sabor->getNome()?>">
                         </div>
                         <div class="sabor_descricao">
-                            <strong>Alho e Óleo</strong>
-                            Molho, alho, óleo e mussarela
+                            <strong><?=$sabor->getNome()?></strong>
+                            <?=$sabor->getIngredientes()?>
                         </div>
                     </label>
                 </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens//atum.jpg" alt="atum">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Atum</strong>
-                            Molho, Atum, cebola e mussarela
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/marguerita.jpg" alt="marguerita">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Marguerita</strong>
-                            Molho, mussarela, manjericão, tomate
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens//milho.jpg" alt="milho">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Milho</strong>
-                            Molho, milho e mussarela
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/vegetariana.jpg" alt="vegetariana">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Vegetariana</strong>
-                            Molho, rúcula, tomate seco e mussarela
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/mussarela.jpg" alt="mussarela">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Mussarela</strong>
-                            Molho, mussarela e orégano
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/strogonoff.jpg" alt="strogonoff">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Strogonoff</strong>
-                            Molho, strogonoff e batata palha
-                        </div>
-                    </label>
-                </div>
-
-                <div class="sabor">
-                    <label>
-                        <input type="checkbox" name="sabores[]" value="" onchange="updateCount()">
-                        <div class="sabor_img">
-                            <img src="imagens/frango.jpg" alt="frango">
-                        </div>
-                        <div class="sabor_descricao">
-                            <strong>Frango</strong>
-                            Molho, frango, catupiry e mussarela
-                        </div>
-                    </label>
-                </div>
+                <?php
+                }
+            }
+            ?>
             </div> <!-- fim container -->
             <br><br>
             <fieldset>

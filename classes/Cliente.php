@@ -16,9 +16,8 @@
         private $observacoes;
 
         public function __construct(){
-                $this->promoParceiros = null;
-                $this->promoPizza = null; 
-                $this->observacoes = null;
+
+                
             }
         public function validate(){
                 $erros = array();

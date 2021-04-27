@@ -44,7 +44,7 @@
             <br>
             
             <label for="obs">OBS</label><br>
-            <input type="text" id="obs" class="form-input" name="obs" placeholder="obs" value = "<?=$cliente[0]->getObservacoes(); ?>" >
+            <input type="text" id="obs" class="form-input" name="obs" placeholder="obs" value = "<?=$cliente[0]->getObservacoes() ?>" >
             
             <br>
             <input type="submit"  class="button-register" name ='alterar' value="Alterar" id='registrar' >

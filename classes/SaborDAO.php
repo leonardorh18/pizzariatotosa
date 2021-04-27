@@ -27,7 +27,7 @@
                 $query = $this->conexao->prepare("select * from sabor where codigo=:cod");
                 $query->bindParam(":cod", $cod);
                 $query->execute();
-                $registro = $query->fetch(PDO::FETCH_CLASS, "Sabor");
+                $registro = $query->fetchAll(PDO::FETCH_CLASS, "Sabor");
                 return $registro;
             }
             catch(PDOException $e){

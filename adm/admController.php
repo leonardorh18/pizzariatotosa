@@ -18,6 +18,12 @@ else {
             header('Location: clienteController.php');
             
          break;
+
+         case 'addsabor':
+
+            header('Location: saborController.php');
+
+         break;
                       
     }// fim switch
 } // fim else

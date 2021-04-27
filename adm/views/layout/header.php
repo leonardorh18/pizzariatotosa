@@ -34,6 +34,8 @@
         <ul>
 
             <li><a href="admController.php?view=addcliente">Add Cliente</a> </li>
+            <li><a href="admController.php?view=addsabor">Add Sabor</a> </li>
+            <li><a href='../index.php'>Inicio pizzaria</a> </li>
 
             <li><a href="admController.php">Adm</a> </li>
             

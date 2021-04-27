@@ -5,9 +5,9 @@ if(!isset($_GET['acao'])){
     $titulo = "Lista de Sabores";
     $obj = new SaborDAO();
     $lista = $obj->listar();
-    include "views/layout/topo.php";
+    include "views/layout/header.php";
     include "views/listaSabor.php";
-    include "views/layout/rodape.php";
+    include "views/layout/footer.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -16,9 +16,9 @@ else {
             $titulo = "Cadastro de Sabor";
             // logica para cadastro
             if(!isset($_POST['cadastrar'])){ // dados ainda nao submetidos
-                include "views/layout/topo.php";
+                include "views/layout/header.php";
                 include "views/cadastraSabor.php";
-                include "views/layout/rodape.php";                
+                include "views/layout/footer.php";                
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Sabor();
@@ -27,13 +27,13 @@ else {
                 $novo->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "views/layout/topo.php";
+                    include "views/layout/header.php";
                     include "views/cadastraSabor.php";
-                    include "views/layout/rodape.php";                       
+                    include "views/layout/footer.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload
-                    $destino = "../assets/images/".$_FILES['field_imagem']['name']; 
+                    $destino = "../imagens/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         //inserção
                         $bd = new SaborDAO();
@@ -43,9 +43,9 @@ else {
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "views/layout/topo.php";
+                        include "views/layout/header.php";
                         include "views/cadastraSabor.php";
-                        include "views/layout/rodape.php";                         
+                        include "views/layout/footer.php";                         
                     }
                 }
             }
@@ -55,11 +55,11 @@ else {
             case 'altera':
                 $titulo = "Alteração de Sabor";
                 if(!isset($_POST['alterar'])){ // dados ainda nao submetidos; carrega os dados atuais
-                    $obj = new ClienteDAO();
+                    $obj = new SaborDAO();
                     $sabor = $obj->buscar($_GET['cod']);
-                    include "views/layout/topo.php";
+                    include "views/layout/header.php";
                     include "views/alteraSabor.php";
-                    include "views/layout/rodape.php"; 
+                    include "views/layout/footer.php"; 
                 }
                 else{ // dados submetidos; efetua a alteração
                     $obj = new Sabor();
@@ -69,14 +69,14 @@ else {
                     $obj->setCodigo($_POST['field_codigo']);
                     $erros = $obj->validate();
                     if(count($erros) != 0){ 
-                        echo 'EROOOOOOOOOOOOOOO';// algum campo em branco
-                        include "views/layout/topo.php";
+                        // algum campo em branco
+                        include "views/layout/header.php";
                         include "views/alteraSabor.php";
-                        include "views/layout/rodape.php";                       
+                        include "views/layout/footer.php";                       
                     }
                     else{ // campos todos preenchidos
                         //upload
-                        $destino = "../assets/images/".$_FILES['field_imagem']['name']; 
+                        $destino = "../imagens/".$_FILES['field_imagem']['name']; 
                         if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                             //inserção
                             $bd = new SaborDAO();
@@ -86,9 +86,9 @@ else {
                         else{
                             // erro no upload
                             $erros[] = "Erro no upload";
-                            include "views/layout/topo.php";
+                            include "views/layout/header.php";
                             include "views/cadastraSabor.php";
-                            include "views/layout/rodape.php";                         
+                            include "views/layout/footer.php";                         
                         }
                     }
                 }

@@ -1,4 +1,6 @@
-<main>
+<main id = 'principal'>
+
+<div id = 'area-principal'>
     <h2><?= $titulo ?></h2>
     <hr>
     <br>
@@ -37,4 +39,6 @@
         </div>
     </form>
     <br><br><br><br>
+
+    </div>
 </main>
