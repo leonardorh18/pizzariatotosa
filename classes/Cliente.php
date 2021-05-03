@@ -32,7 +32,21 @@
                 if(empty($this->getDataNascimento()))
                     $erros[] = "complete tudo";   
                 if(empty($this->getSenha()))
-                    $erros[] = "complete tudo";   
+                    $erros[] = "complete tudo";
+
+                if(!empty($this->getSenha())){
+
+                        $pass = $this->getSenha();
+
+                        if (strlen($pass) < 6){
+                        
+                                $erros[] = "Senha menor do que 6 caracteres";
+
+                        } else {
+
+                                $this->setSenha(md5($this->getSenha()));
+                        }
+                }
                 if(empty($this->getEndereco()))
                     $erros[] = "complete tudo";   
                 if(empty($this->getBairro()))

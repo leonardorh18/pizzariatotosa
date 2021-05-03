@@ -14,6 +14,7 @@
         <th>Código</th>
         <th>Nome</th>
         <th>Email</th>
+        <th>Senha</th>
         <th>Telefone</th>
         <th>Endereco</th>
         <th>Nascimento</th>
@@ -30,6 +31,7 @@
                 <td><?=$cliente->getCodigo() ?></td>
                 <td><?=$cliente->getNome() ?></td>
                 <td><?=$cliente->getEmail() ?></td>
+                <td><?=$cliente->getSenha()?></td>
                 <td><?=$cliente->getTelefone() ?></td>
                 <td><?=$cliente->getEndereco() ?></td>
                 <td><?=$cliente->getDataNascimento() ?></td>

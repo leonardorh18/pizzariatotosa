@@ -85,41 +85,6 @@
 	<script> 
 	function doRegister(){
 
-		email = document.getElementById("email");
-		pass = document.getElementById("password");
-		cpass = document.getElementById("confirmPassword");
-		tel = document.getElementById("tel");
-		rua = document.getElementById("rua");
-		bairro = document.getElementById("bairro");
-		
-		
-		if (email.value && pass.value  && cpass.value  && tel.value  && rua.value  && bairro.value ){
-
-			if ( pass.value == cpass.value){
-				
-				if (pass.value.length >= 5){
-
-				console.log("Verificando no php...");
-				return true;
-
-				} else {
-					window.alert("A senha deve ter no minimo 5 caracteres!");
-					return false;
-
-				}
-
-
-			} else {
-
-				window.alert("As senhas não correspondem!");
-				return false;
-			}
-		} else {
-
-			window.alert("Preencha todos os campos!");
-			return false;
-
-		}
 	}
 	</script>
 	

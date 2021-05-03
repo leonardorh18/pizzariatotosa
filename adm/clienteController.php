@@ -38,9 +38,13 @@ else {
                 
                 $cliente->setObservacoes($_POST['obs']);
                 $erros = $cliente->validate();
-                if(count($erros) != 0){ // algum campo em branco
-                    echo '<script> alert("Erro"); </script>';
-                    header("Location: clienteController.php");                    
+                if(count($erros) != 0){ 
+                    
+                    foreach($erros as $erro){
+
+                        echo '<p>'.$erro.'</p>';
+                    }
+                                     
                 } else{
                     $bd = new ClienteDAO();
                     if($bd->inserir($cliente))
